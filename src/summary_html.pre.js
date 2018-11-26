@@ -24,9 +24,7 @@ function filterNav(navChildren, path, logger) {
 
         nav = nav.map(element => element
             // prefix with currentFolderPath from links not starting with http:// or https://
-            .replace(new RegExp('href="((?!http.*://))', 'g'), `href="${currentFolderPath}/`)
-            // replace md extension by .html
-            .replace(new RegExp('.md"', 'g'), '.html"'));
+            .replace(new RegExp('href="((?!http.*://))', 'g'), `href="${currentFolderPath}/`));
             
         logger.debug(`summary_html.pre.js - Managed to collect some content for the nav: ${nav.length}`);
         return nav;

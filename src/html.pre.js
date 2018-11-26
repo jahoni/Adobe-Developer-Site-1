@@ -26,16 +26,6 @@ function removeFirstTitle(children, logger) {
   return ret;
 }
 
-function fixTheLinks(children, logger) {
-  logger.debug('html-pre.js - Fixing the links (md to html)');
-  let ret = children;
-  if (ret && ret.length > 0) {
-    ret = ret.map(element => element
-      .replace(new RegExp('.md"', 'g'), '.html"'));
-  }
-  return ret;
-}
-
 /**
  * Fetches the commits history
  * @param String apiRoot API root url
@@ -244,7 +234,6 @@ async function pre(payload, action) {
 
     // clean up the resource
     p.content.children = removeFirstTitle(p.content.children, logger);
-    p.content.children = fixTheLinks(p.content.children, logger);
 
     // extract committers info and last modified based on commits history
     if (secrets.REPO_API_ROOT) {

@@ -38,7 +38,7 @@ function extractAbsoluteLink(md, request, logger) {
   // extract link from markdown
   const match = /\[.*\]\((.*)\)/g.exec(md);
   if (match && match.length === 2) {
-    const link = match[1].replace(/\.md/g, '.html');
+    const link = match[1];
     return `https://${request.headers.host}${getParent(request.params.path)}${link}`;
   }
   return null;

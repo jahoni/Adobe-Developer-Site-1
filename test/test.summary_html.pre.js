@@ -38,7 +38,7 @@ describe('Testing extractNav', () => {
       [
         '<h1>Table of contents</h1>',
         '\n',
-        '<ul>\n<li>a</li>\n<li>b</li>\n<li><a href="link.md">link</a></li>\n</ul>',
+        '<ul>\n<li>a</li>\n<li>b</li>\n<li><a href="link.html">link</a></li>\n</ul>',
       ],
       '/current/path/index.md',
       loggerMock,

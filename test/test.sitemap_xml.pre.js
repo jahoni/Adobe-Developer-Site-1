@@ -44,7 +44,7 @@ describe('Testing pre requirements for main function', () => {
 describe('Testing extractAbsoluteLink', () => {
   it('returns absolute link if markdown has link', () => {
     const output = defaultPre.extractAbsoluteLink(
-      '* [This is a link](otherfile.md)',
+      '* [This is a link](otherfile.html)',
       requestMock,
       loggerMock,
     );
@@ -88,9 +88,9 @@ describe('Testing createSitemap', () => {
   it('returns correct sitemap from markdown with links ', () => {
     const output = defaultPre.createSitemap(
       [
-        '* [This is a link](file.md)',
-        '* [This is a link](otherfile.md)',
-        '* [This is a link](yet/another/file.md)',
+        '* [This is a link](file.html)',
+        '* [This is a link](otherfile.html)',
+        '* [This is a link](yet/another/file.html)',
         '* This is not (a link)',
       ].join('\n'),
       requestMock,
