@@ -15,7 +15,7 @@ Popularity contest
 
 ### Specific community-related content
 Events/meet-ups (short list, plus link to full)<br>
-Forums
+Adobe on GitHub
 
 #### Recent blog articles (site-persistent sub-footer)
 
